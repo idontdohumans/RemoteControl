@@ -20,7 +20,7 @@ public class RemoteControlFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent,
                              Bundle savedInstanceState) {
-        final View v = inflater.inflate(R.layout.fragment_remote_control, parent, false);
+        View v = inflater.inflate(R.layout.fragment_remote_control, parent, false);
 
         mSelectedTextView = (TextView)v
                 .findViewById(R.id.fragment_remote_control_selectedTextView);
@@ -29,7 +29,7 @@ public class RemoteControlFragment extends Fragment {
 
         View.OnClickListener numberButtonListener = new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 TextView textView = (TextView)v;
                 String working = mWorkingTextView.getText().toString();
                 String text    = textView.getText().toString();
